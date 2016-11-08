@@ -19,7 +19,28 @@ gulp.task('watch', () => {
 
 gulp.task('eslint', () => {
   gulp.src(['src/**/*.js'])
-      .pipe(eslint())
+      .pipe(eslint({
+          "extends": ["eslint:recommended", "google"],
+          "parserOptions": {
+            "ecmaVersion": 6,
+            "sourceType": "module"
+          },
+          "rules": {
+            "strict": 2,
+            "max-len": [2, 90, 4]
+          },
+          "envs": [
+            "browser"
+          ],
+          "globals": [
+            'alert',
+            'Map',
+            'document',
+            'jQuery',
+            'require'
+          ]
+        })
+      )
       .pipe(eslint.formatEach('compact', process.stderr));
 });
 

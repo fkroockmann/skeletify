@@ -1,6 +1,6 @@
 {
   "name": "skeletify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Built-in application based on browserify/ES2016 with usefull gulp tasks",
   "bin": {
     "skeletify": "bin/skeleton.js"
