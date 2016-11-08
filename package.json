@@ -1,0 +1,20 @@
+{
+  "name": "skeleton",
+  "version": "0.0.1",
+  "description": "Built-in application based on browserify/ES2016 with usefull gulp tasks",
+  "bin": {
+    "skeleton": "bin/skeleton.js"
+  },
+  "keywords": [
+    "browserify",
+    "ES2016",
+    "gulp",
+    "skeleton",
+    "application"
+  ],
+  "author": "Florian Kroockmann",
+  "license": "MIT",
+  "dependencies": {
+    "ncp": "^2.0.0"
+  }
+}
