@@ -1,7 +1,11 @@
 {
   "name": "skeletify",
-  "version": "0.0.3",
-  "description": "Built-in application based on browserify/ES2016 with usefull gulp tasks",
+  "version": "0.0.7",
+  "description": "Built-in application based on browserify/ES2016 with useful gulp tasks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fkroockmann/skeletify"
+  },
   "bin": {
     "skeletify": "bin/skeleton.js"
   },
