@@ -2,6 +2,8 @@
 
 Built-in application based on browserify/ES2016 with useful gulp tasks
 
+This skeleton use the event driven architecture.
+
 ## For use skelitify you need to
 
 ``

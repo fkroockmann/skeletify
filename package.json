@@ -1,6 +1,6 @@
 {
   "name": "skeletify",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Built-in application based on browserify/ES2016 with useful gulp tasks",
   "repository": {
     "type": "git",
