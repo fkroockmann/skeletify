@@ -11,6 +11,7 @@ const watch = require('gulp-watch');
 const babel = require('gulp-babel');
 const stringify = require('stringify');
 const eslint = require('gulp-eslint');
+const gutil = require('gulp-util');
 
 gulp.task('watch', () => {
   gulp.watch(['./src/**/*.js', './src/**/*.tpl'], ['browserify']);
@@ -51,7 +52,10 @@ gulp.task('copy', () => {
 
 gulp.task('less', () => {
   return gulp.src(['resource/less/app.less'])
-         .pipe(less())
+        .pipe(less().on('error', function(err){
+            gutil.log(err);
+            this.emit('end');
+          }))
          .pipe(cssnano({"zindex": false}))
          .pipe(gulp.dest('dist/css'));
 });
@@ -63,6 +67,7 @@ gulp.task('browserify', () => {
             extensions: ['.tpl']
         })
       }))
+      .on('error', gutil.log)
       .pipe(babel({
         presets: ['es2015']
       }))
